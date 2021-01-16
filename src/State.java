@@ -41,4 +41,12 @@ public class State {
     public void setFunctionResult(double functionResult) {
         this.functionResult = functionResult;
     }
+
+    public List<State> getNeighbors() {
+        return neighbors;
+    }
+
+    public void setNeighbors(List<State> neighbors) {
+        this.neighbors = neighbors;
+    }
 }
