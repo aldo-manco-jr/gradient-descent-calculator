@@ -15,12 +15,12 @@ public class TabuList {
         this.tabuList = new CircularFifoQueue<>(Constants.TABU_TENURE);
     }
 
-    public void add(State solution) {
-        this.tabuList.add(solution);
+    public void add(State justVisitedState) {
+        this.tabuList.add(justVisitedState);
     }
 
-    public boolean contains(State solution) {
-        return this.tabuList.contains(solution);
+    public boolean contains(State state) {
+        return this.tabuList.contains(state);
     }
 
     public List<State> getTabuItems() {

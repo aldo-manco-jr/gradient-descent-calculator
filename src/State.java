@@ -38,10 +38,6 @@ public class State {
         return functionResult;
     }
 
-    public void setFunctionResult(double functionResult) {
-        this.functionResult = functionResult;
-    }
-
     public List<State> getNeighbors() {
         return neighbors;
     }
@@ -49,5 +45,4 @@ public class State {
     public void addNeighbor(State neighborState) {
         this.neighbors.add(neighborState);
     }
-
 }
