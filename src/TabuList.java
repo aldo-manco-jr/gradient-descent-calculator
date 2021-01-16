@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * Created by unieuro on 1/16/2021.
+ * Created by Aldo Manco on 1/16/2021.
  */
 public class TabuList {
 
@@ -15,15 +15,15 @@ public class TabuList {
         this.tabuList = new CircularFifoQueue<>(Constants.TABU_TENURE);
     }
 
-    public void add(State solution){
+    public void add(State solution) {
         this.tabuList.add(solution);
     }
 
-    public boolean contains(State solution){
+    public boolean contains(State solution) {
         return this.tabuList.contains(solution);
     }
 
-    public List<State> getTabuItems(){
+    public List<State> getTabuItems() {
         return IteratorUtils.toList(this.tabuList.iterator());
     }
 }

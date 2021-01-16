@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by unieuro on 1/16/2021.
+ * Created by Aldo Manco on 1/16/2021.
  */
 public class State {
 
@@ -11,10 +11,10 @@ public class State {
     private double functionResult; // f(x, y)
     private List<State> neighbors;
 
-    public State(double x, double y, double z) {
+    public State(double x, double y, double functionResult) {
         this.x = x;
         this.y = y;
-        this.z = z;
+        this.functionResult = functionResult;
         this.neighbors = new ArrayList<>();
     }
 
@@ -46,7 +46,8 @@ public class State {
         return neighbors;
     }
 
-    public void setNeighbors(List<State> neighbors) {
-        this.neighbors = neighbors;
+    public void addNeighbor(State neighborState) {
+        this.neighbors.add(neighborState);
     }
+
 }
