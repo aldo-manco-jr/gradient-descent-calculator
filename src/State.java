@@ -8,7 +8,7 @@ public class State {
 
     private double x; // x
     private double y; // y
-    private double z; // f(x, y)
+    private double functionResult; // f(x, y)
     private List<State> neighbors;
 
     public State(double x, double y, double z) {
@@ -34,11 +34,11 @@ public class State {
         this.y = y;
     }
 
-    public double getZ() {
-        return z;
+    public double getFunctionResult() {
+        return functionResult;
     }
 
-    public void setZ(double z) {
-        this.z = z;
+    public void setFunctionResult(double functionResult) {
+        this.functionResult = functionResult;
     }
 }
